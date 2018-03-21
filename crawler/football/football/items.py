@@ -38,6 +38,7 @@ class FootballItem(scrapy.Item):
 
 
 class ResultItem(scrapy.Item):
+    _id = scrapy.Field()
     home_name = scrapy.Field()
     away_name = scrapy.Field()
     time = scrapy.Field()
@@ -45,3 +46,6 @@ class ResultItem(scrapy.Item):
     result = scrapy.Field()
     score = scrapy.Field()
     odds = scrapy.Field()
+    a_odds = scrapy.Field()
+    h_odds = scrapy.Field()
+    d_odds = scrapy.Field()
