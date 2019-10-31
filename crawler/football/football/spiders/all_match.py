@@ -37,7 +37,6 @@ class ResultCrawler(scrapy.Spider):
             item['a_odds'] = td[7].xpath("./span/text()").extract_first()
             item['d_odds'] = td[8].xpath("./span/text()").extract_first()
             item['result'] = self.tool.getResultByScore(item['score'])
-            record = {}
             record = item
             matchId = time.strftime("%Y%m%d", time.strptime(
                 item['time'], "%Y-%m-%d")) + item['match_id'][-3:]
